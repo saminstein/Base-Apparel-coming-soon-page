@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Josefin Sans';
+    font-size: 1rem;
+    background: linear-gradient(
+    135deg, 
+    hsl(0, 0%, 100%), 
+    hsl(0, 100%, 98%)
+    );
+    color: var(--Desaturated-Red);   
+}
+
+
+.logo-container {
+    padding: 30px;
+}
+
+
+.logo {
+   width: 100px;
+   height: auto;
+}
+
+
+.orange {
+    width: 100%;  
+}
+
+
+.page-info {
+    text-align: center;
+    padding: 42px 30px 45px;
+}
+
+
+h1 {
+    font-size: 40px;
+    color: var(--Dark-Grayish-Red);
+    line-height: 1.1;
+    letter-spacing: 9px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+
+span {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+
+p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+form {
+    position: relative;
+    margin: 30px 0;
+}
+
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid var(--Desaturated-Red);
+    background: inherit;
+}
+
+
+input:focus {
+    outline: none;
+    border-color: var(--Desaturated-Red);
+}
+
+
+input::placeholder {
+    font-family: 'Josefin sans';
+    color: var(--Desaturated-Red);
+    padding-left: 5px;
+    opacity: 0.5;
+}
+
+
+button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65px;
+    border-radius: 25px;
+    padding-left: 25px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    box-shadow: 0px 20px 25px var(--Desaturated-Red);
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: var(--Desaturated-Red);
+}
+
+
+#error-message {
+    position: absolute;
+    left: 21px;
+    top: -20px;
+    color: var(--Soft-Red);
+    display: none;
+}
+
+
+.error-icon {
+    position: absolute;
+    top: 13px;
+    right: 70px;
+    display: none;
+}
+
+
+.error .error-icon {
+    display: block;
+}
+
+
+.error #error-message {
+    display: block;
+}
+
+
+.error input {
+    border: 2px solid var(--Soft-Red);
+}
+
+@media only screen and (min-width: 800px) {
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    column-gap: 25px;
+
+}
+
+
+header {
+    display: contents; /* this to make elements inside header grid items */    
+}
+
+
+.logo-container {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 50px;
+}
+
+
+.hero-pics img {
+    grid-column: 2;
+    grid-row: 1;
+    height: 100%;
+    /*justify-self: end;*/
+    object-fit: cover;
+    width: auto;
+}
+
+
+page-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.page-info {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    text-align: left;
+    margin: 50px;
+    align-self: center;
+}
+
+
+button {
+    width: 80px;
+    padding-left: 37px;
+}
+
+
+.error-icon {
+    right: 85px;
+}
+
+
+.grid-container::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / -1;
+    background: url('images/bg-pattern-desktop.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+}

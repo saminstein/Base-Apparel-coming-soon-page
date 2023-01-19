@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saminstein | Base Apparel Coming Soon Page</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="grid-container">       
+        <header>
+            <figure class="logo-container">
+                <img class="logo" src="images/logo.svg" alt="company logo" width="158" height="33">
+            </figure>
+            <picture class="hero-pics">
+                <source media="(min-width: 800px)" srcset="images/hero-desktop.jpg" class="s">
+                <img src="images/hero-mobile.jpg" alt="a woman with an orange top" class="orange">
+            </picture>
+        </header>
+        
+        <main class="page-info">
+            <h1><span>WE'RE</span> COMING SOON</h1>
+            <p> Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <form novalidate>
+                <p id="error-message" aria-live="polite">Please provide a valid email</p>                                   
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email" 
+                  placeholder="Email Address" 
+                  aria-label="Email Address" 
+                  aria-describedby="error-message" 
+                  autocomplete="email" 
+                  required
+                />
+                <img class="error-icon" src="images/icon-error.svg" alt="">
+                <button type="submit"><img src="images/icon-arrow.svg" alt=""></button>                   
+            </form>         
+        </main>               
+    </article>   
+    <script src="index.js"></script>
+</body>
+</html>
