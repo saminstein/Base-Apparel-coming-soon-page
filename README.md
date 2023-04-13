@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
-- Live Site URL: [Github Live Site](https://your-live-site-url.com)
+- Live Site URL: [Github Live Site](https://saminstein.github.io/Base-Apparel-coming-soon-page/)
 
 ## My process
 
